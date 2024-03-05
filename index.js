@@ -1,7 +1,7 @@
 const app = require("express")();
 const server = require("http").createServer(app);
 const cors = require("cors");
-const { SOCKET_EVENTS } = require("../utils/constants");
+const { SOCKET_EVENTS } = require("./utils/constants");
 
 const io = require("socket.io")(server, {
   cors: {
