@@ -66,8 +66,4 @@ io.on(SOCKET_EVENTS.CONNECTION, (socket) => {
   });
 });
 
-app.get("/", (req, res) => res.send("Express on Vercel"));
-
 server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-
-module.exports = app;
