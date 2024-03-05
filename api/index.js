@@ -1,7 +1,7 @@
 const app = require("express")();
 const server = require("http").createServer(app);
 const cors = require("cors");
-const { SOCKET_EVENTS } = require("./utils/constants");
+const { SOCKET_EVENTS } = require("../utils/constants");
 
 const io = require("socket.io")(server, {
   cors: {
@@ -65,6 +65,8 @@ io.on(SOCKET_EVENTS.CONNECTION, (socket) => {
     });
   });
 });
+
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
 server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
