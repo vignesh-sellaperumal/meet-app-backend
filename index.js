@@ -67,3 +67,5 @@ io.on(SOCKET_EVENTS.CONNECTION, (socket) => {
 });
 
 server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
+module.exports = app;
