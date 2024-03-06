@@ -52,6 +52,11 @@ io.on(SOCKET_EVENTS.CONNECTION, (socket) => {
     io.to(payload.target).emit(SOCKET_EVENTS.TOGGLE_MIC, payload.micStatus);
   });
 
+  
+  socket.on(SOCKET_EVENTS.TOGGLE_VIDEO, (payload) => {
+    io.to(payload.target).emit(SOCKET_EVENTS.TOGGLE_VIDEO, payload.videoStatus);
+  });
+
   socket.on(SOCKET_EVENTS.DISCONNECT, () => {
     let socketId = socket.id;
     Object.keys(rooms).forEach((roomId, index) => {

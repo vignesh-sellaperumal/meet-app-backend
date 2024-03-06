@@ -9,6 +9,7 @@ module.exports = {
     USER_JOINED: "user-joined",
     ANSWER: "answer",
     TOGGLE_MIC: "toggle-mic",
+    TOGGLE_VIDEO: "toggle-video",
     USER_LEAVE: "user-leave",
     DISCONNECT: "disconnect",
   },
