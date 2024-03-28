@@ -71,4 +71,6 @@ io.on(SOCKET_EVENTS.CONNECTION, (socket) => {
   });
 });
 
+app.get("/", (_req, res) => res.send("Your server is running"));
+
 server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
